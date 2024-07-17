@@ -1,0 +1,14 @@
+names:
+- thnhan
+nc: 1
+roboflow:
+  license: MIT
+  project: thnhan_facedetection
+  url: https://universe.roboflow.com/main-orgu1/thnhan_facedetection/dataset/2
+  version: 2
+  workspace: main-orgu1
+
+path: F:/Code/Python/YOLO_SFT24
+test: thnhan_facedetection-2/test/images
+train: thnhan_facedetection-2/train/images
+val: thnhan_facedetection-2/valid/images

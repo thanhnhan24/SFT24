@@ -1,14 +1,15 @@
+names:
+- pntt
+- pvy
 nc: 2
-names: ['pntt', 'pvy']
-
 roboflow:
-  workspace: main-orgu1
-  project: sft24-facedetect
-  version: 1
   license: CC BY 4.0
-  url: https://universe.roboflow.com/main-orgu1/sft24-facedetect/dataset/1
+  project: sft24-facedetect
+  url: https://universe.roboflow.com/main-orgu1/sft24-facedetect/dataset/5
+  version: 5
+  workspace: main-orgu1
 
 path: F:/Code/Python/YOLO_SFT24
-test: SFT24-facedetect/test/images
-train: SFT24-facedetect/train/images
-val: SFT24-facedetect/valid/images
+test: SFT24-facedetect-5/test/images
+train: SFT24-facedetect-5/train/images
+val: SFT24-facedetect-5/valid/images

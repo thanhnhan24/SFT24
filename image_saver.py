@@ -23,7 +23,7 @@ def save_frame(frame, output_folder, img_num):
 
 def main():
     # Đường dẫn thư mục đầu ra
-    output_folder = "pvy"
+    output_folder = "tonghop"
     
     # Tạo thư mục nếu chưa tồn tại
     if not os.path.exists(output_folder):

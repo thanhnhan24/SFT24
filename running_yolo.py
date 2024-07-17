@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 
 # Load the YOLOv8 model
-model = YOLO("F:/Code/Python/YOLO_SFT24/runs/detect/train27/weights/best.pt")
+model = YOLO("F:/Code/Python/YOLO_SFT24/runs/detect/train11/weights/best.pt")
 
 # Open the video file
 video_path = 0
@@ -15,8 +15,19 @@ while cap.isOpened():
 
     if success:
         # Run YOLOv8 inference on the frame
-        results = model(frame)
-
+        
+        results = model.predict(frame)
+        detected_classes = set()
+        for result in results:
+            for box in result.boxes:
+                class_id = int(box.cls[0])
+                detected_classes.add(model.names[class_id])
+        
+        # Print the detected classes
+        if detected_classes:
+            print(f"Detected classes: {', '.join(detected_classes)}")
+        else:
+            print("No classes detected")
         # Visualize the results on the frame
         annotated_frame = results[0].plot()
 
